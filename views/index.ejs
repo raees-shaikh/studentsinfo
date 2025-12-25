@@ -1,0 +1,28 @@
+
+   <%-include('partials/header')%>
+   <h1 class="text-center text-white">Students Information</h1>
+   <a href="add" class="btn btn-primary my-3"> Add Student</a>
+    <table class="table table-primary">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">D.O.B</th>
+      <th scope="col">Gender</th>
+        <th scope="col">Mobile</th>
+         <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% user.forEach((x)=>{ %>
+         <tr>
+      <td><%= x.name %></td>
+      <td><%= x.age %></td>
+      <td><%= x.gender %></td>
+        <td><%= x.mobile %></td>
+        <td><a href="/show/<%= x._id %>" class="btn-primary btn">View Details</a> <a href="/update/<%= x._id %>" class="btn-warning btn">Edit</a> <a href="/delete/<%= x._id %>" class=" btn btn-danger">Delete</a></td>
+
+    </tr>
+    <% }) %>
+     </tbody>
+</table>
+<%-include('partials/footer')%>

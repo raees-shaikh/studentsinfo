@@ -1,0 +1,15 @@
+
+   <%-include('partials/header')%>
+   <h2 class="text-white"><%= user.name %></h2>
+    <table class="table table-primary">
+  <thead>
+    <tr>
+      <th scope="col">Name: <%= user.name %></th>
+      <th scope="col">D.O.B: <%= user.age %></th>
+      <th scope="col">Gender: <%= user.gender %></th>
+        <th scope="col">Mobile: <%= user.mobile %></th>
+         <th scope="col"><a href="/">Back</a></th>
+    </tr>
+  </thead>
+</table>
+<%-include('partials/footer')%>
